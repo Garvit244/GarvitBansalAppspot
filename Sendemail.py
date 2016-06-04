@@ -31,11 +31,7 @@ class MailHandler(webapp.RequestHandler):
         "text": message_body
     }
     resp, content = http.request(url, 'POST', urlencode(data))
-    if resp.status == 200:
-        http.request(url, 'POST', urlencode(acknowledge_data))
-    else:
-        http.request(url, 'POST', urlencode("Error in sending Mail"))
-
+    http.request(url, 'POST', urlencode(acknowledge_data))
     self.redirect('/')
 
 
