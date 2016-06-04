@@ -1,1 +1,5 @@
-How to Update the Site:
+For adding any libraries run this command:
+⇒  pip install -t lib -r ~/Desktop/appsot/requirements.txt
+
+Update the Site:
+⇒  appcfg.py update appsot/
