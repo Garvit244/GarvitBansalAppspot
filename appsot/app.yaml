@@ -1,0 +1,16 @@
+application: garvitbansal244
+version: 1
+runtime: python
+api_version: 1
+
+handlers:
+- url: /(.*\.(gif|png|jpg|ico|js|map|css|eot|woff|less|scss|otf|scg|ttf))
+  static_files: \1
+  upload: (.*\.(gif|png|jpg|ico|js|css|eot|woff|less|scss|otf|scg|ttf))
+
+
+- url: /
+  script: main.py
+
+- url: /send-email
+  script: Sendemail.py
